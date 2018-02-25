@@ -1,1 +1,1 @@
-# Student Information Management System
+# SMIS
