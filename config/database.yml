@@ -1,0 +1,23 @@
+base: &base
+  adapter: postgresql
+  encoding: utf8
+  reconnect: true
+  port: 5432
+  pool: 50
+
+development:
+  <<: *base
+  host: postgres
+  username: postgres
+  database: sims
+
+test:
+  <<: *base
+  host: postgres
+  username: postgres
+  database: sims_test
+
+production:
+  <<: *base
+  database: sims_prod
+  # host: TODO
