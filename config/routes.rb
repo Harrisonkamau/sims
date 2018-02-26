@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'student/new'
+
+  get 'student/create'
+
+  get 'student/index'
+
+  get 'student/show'
+
   devise_for :users
 
   devise_scope :user do
