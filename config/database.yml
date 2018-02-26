@@ -8,14 +8,16 @@ base: &base
 development:
   <<: *base
   host: postgres
-  username: postgres
   database: sims
+  username: postgres
+  password: 'postgres'
 
 test:
   <<: *base
   host: postgres
-  username: postgres
   database: sims_test
+  username: postgres
+  password: 'postgres'
 
 production:
   <<: *base
