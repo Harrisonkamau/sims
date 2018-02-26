@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4'
+gem 'factory_bot_rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
