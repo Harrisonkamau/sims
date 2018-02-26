@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     authenticated :user do
       root 'welcome#index', as: :authenticated_root
+      get '/about-sims', to: 'welcome#index', as: 'about'
     end
 
     unauthenticated do
