@@ -1,0 +1,16 @@
+@import 'variables';
+
+.navbar {
+  a {
+    color: $nav_links;
+    &:hover {
+      color: $primary_color;
+      text-decoration: none;
+    }
+  }
+  .nav-item {
+    display: inline-block;
+    padding-right: 10px;
+  }
+}
+

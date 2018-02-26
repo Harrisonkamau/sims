@@ -1,0 +1,20 @@
+<nav class='navbar'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <a class="navbar-brand" href="#">SIMS</a>
+    </div>
+    <div class='navbar navbar-right'>
+      <ul>
+        <%- if user_signed_in? %>
+        <li class='nav-item'><a href=''>Home</a></li>
+        <li class='nav-item'><a href=''>About</a></li>
+        <li class='nav-item'><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete'%></li>
+        <% else %>
+        <li class='nav-item'><%= link_to 'Log in', new_user_session_path %></li>
+        <li class='nav-item'><%= link_to 'Sign up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
