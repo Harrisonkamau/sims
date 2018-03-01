@@ -1,1 +1,10 @@
+<div class='col-md-6 flashes'>
+  <% if flash %>
+    <% flash.each do |flash_type, text| %>
+      <div class="alert">
+        <%= text %>
+      </div>
+    <% end %>
+<% end %>
+</div>
 
