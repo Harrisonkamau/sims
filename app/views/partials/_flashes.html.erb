@@ -1,7 +1,7 @@
-<div class='col-md-6 flashes'>
+<div class="container flashes">
   <% if flash %>
     <% flash.each do |flash_type, text| %>
-      <div class="alert">
+      <div class="alert alert-danger alert-dismissible" role="alert">
         <%= text %>
       </div>
     <% end %>

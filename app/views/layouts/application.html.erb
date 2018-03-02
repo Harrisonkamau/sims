@@ -10,8 +10,14 @@
 
   <body>
     <%= render 'partials/navbar' %>
-    <%= render 'partials/flashes' %>
 
-    <%= yield %>
+    <div class='container'>
+      <div class='alert'>
+        <%= render 'partials/flashes' %>
+      </div>
+
+      <%= yield %>
+    </div>
+
   </body>
 </html>

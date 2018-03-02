@@ -1,9 +1,21 @@
+// Navigation
 @import 'navbar';
+
+// Forms
 @import 'forms/main_form';
 @import 'forms/student_form';
+
+// A tags
 @import 'links/a_links';
+
+// Flash messages
+@import 'flashes/alert';
+
+// Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+
+// common rules
 body {
   font-family: 'Lato', sans-serif;
 
