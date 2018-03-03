@@ -1,0 +1,53 @@
+<div class='container form'>
+  <h2 class='student-form'>Create student profile</h2>
+  <br/>
+
+  <%= form_for @student do |f|%>
+    <div class='form-group'>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, placeholder: 'First name', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, placeholder: 'Last name', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :admission_number %>
+      <%= f.text_field :admission_number, placeholder: 'Admission number', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :national_id_number %>
+      <%= f.number_field :national_id_number, placeholder: 'National ID Number', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :course %>
+      <%= f.text_field :course, placeholder: 'Course', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :department %>
+      <%= f.text_field :department, placeholder: 'Department', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :year_of_admission %>
+      <%= f.text_field :year_of_admission, placeholder:'YYYY', class:'form-control date'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :year_of_completion %>
+      <%= f.text_field :year_of_completion, placeholder:'YYYY', class: 'form-control'%>
+    </div>
+    <div class='form-group'>
+      <%= f.label :gender %> &nbsp;
+      <%= f.select :gender, options_for_select(['Male','Female'])%>
+      &nbsp;&nbsp;
+      <span>
+        <%= f.label :fee_status %>&nbsp;
+        <%= f.select :fee_status, options_for_select(['Complete','Incomplete'])%>
+      </span>
+    </div>
+    <div class='form-group'>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Create student", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

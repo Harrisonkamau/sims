@@ -1,24 +1,26 @@
-class StudentController < ApplicationController
+class StudentsController < ApplicationController
+  def index
+    @student = Student.all
+  end
+
+  def show
+    @student = Student.find(params[:id])
+  end
+
   def new
     @student = Student.new
   end
 
   def create
     @student = Student.new(required_params)
-    if @student.save?
-      redirect_to @student
+    if @student.save!
+      redirect_to student_path(@student)
     else
-      redirect_to student_new_path(@student)
+      render :new
     end
   end
 
-  def index
-    @student = Student.all
-  end
 
-  def show
-    @student = Student.find(params[:student])
-  end
 
   private
 
