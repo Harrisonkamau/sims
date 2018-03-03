@@ -3,6 +3,7 @@
 #bs-example-navbar-collapse-1 {
   a {
     color: $nav_links;
+    text-transform: uppercase;
 
     &:hover {
       color: $primary_color;
