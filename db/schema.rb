@@ -19,9 +19,13 @@ ActiveRecord::Schema.define(version: 20180226202157) do
     t.string "first_name"
     t.string "last_name"
     t.string "admission_number"
+    t.integer "national_id_number"
     t.string "course"
     t.string "department"
-    t.date "year_of_study"
+    t.date "year_of_admission"
+    t.date "year_of_completion"
+    t.string "gender"
+    t.string "fee_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
