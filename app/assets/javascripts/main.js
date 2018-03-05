@@ -6,6 +6,16 @@ $(document).on('ready turbolinks:load', function () {
   $('.nav-tabs a').click(function (e) {
     e.preventDefault()
     $(this).tab('show')
-  })
+  });
+
+  // customize datepicker
+  $('.datepicker').datepicker({
+    format: 'yyyy',
+    title: 'Admission/Completion Year',
+    viewMode: 'years',
+    minViewMode: 'years',
+    autoclose: true,
+    clearBtn: true
+  });
 
 });

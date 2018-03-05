@@ -13,6 +13,7 @@
 //= require vendor/jquery.min.js
 //= require vendor/jquery-ui.min.js
 //= require vendor/bootstrap.min.js
+//= require vendor/bootstrap-datepicker.min.js
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
