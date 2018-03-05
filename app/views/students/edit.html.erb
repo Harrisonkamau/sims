@@ -1,0 +1,7 @@
+<div class='container form'>
+  <h2 class='student-form'>Edit student details</h2>
+  <br/>
+  <%= form_for @student, url: { action: :update } do |f| %>
+    <%= render partial: 'forms', locals: { f: f, save_prompt: 'Save Changes'} %>
+  <% end %>
+</div>

@@ -1,1 +1,10 @@
 <%= @student.first_name %>
+<br/>
+<p><%= link_to 'Edit', edit_student_path(@student) %></p>
+<p>
+  <%= link_to 'Delete', edit_student_path(@student),
+    method: :delete,
+    data: { confirm: "Are you sure you want to delete: #{@student.first_name}?"}
+  %>
+</p>
+Back to <%= link_to 'students', students_path %>
