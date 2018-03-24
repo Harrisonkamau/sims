@@ -1,0 +1,9 @@
+@import 'global/variables';
+
+.student-form {
+  color: $nav_links;
+  border-bottom: 1px solid $underlines;
+  width: 70%;
+  padding-bottom: 10px;
+  text-align: center;
+}

@@ -1,8 +1,9 @@
 @import 'variables';
 
-.navbar {
-  a, .nohref{
+#bs-example-navbar-collapse-1 {
+  a {
     color: $nav_links;
+    text-transform: uppercase;
 
     &:hover {
       color: $primary_color;
@@ -15,3 +16,6 @@
   }
 }
 
+.navbar-brand {
+  font-size: 23px;
+}

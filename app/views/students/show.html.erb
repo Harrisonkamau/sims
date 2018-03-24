@@ -1,0 +1,56 @@
+<div class='container'>
+  <div class='col-md-6 show-page'>
+    <div class='tab-pane fade in active'>
+      <ul class="nav nav-tabs">
+        <li  class="active"><a href="#info">Student Info</a></li>
+        <li><a href="#setting">Setting</a></li>
+        <li><a href="#misc">Miscallenous</a></li>
+      </ul>
+    </div>
+    <div class='tab-content container show-tabs'>
+      <div id='info' class='tab-pane fade in active'>
+        <h2> General Info </h2>
+        <div class='col-sm-6'>
+          <%= image_tag("studentAvatar.jpeg", { :alt => 'Student Avatar', :class=> 'img-rounded'}) %>
+        </div>
+        <div class='col-sm-6'>
+          Full Name: &nbsp; <%= @full_name %>
+          <br>
+          Course: &nbsp; <%= @student.course %>
+          <br>
+          Admission Number: &nbsp; <%= @student.admission_number %>
+          <br>
+          Department: &nbsp; <%= @student.department %>
+          <br>
+          Fee Status: &nbsp; <%= @student.fee_status %>
+          <br>
+          Expected year of completion: &nbsp; <%= @student.year_of_completion %>
+          <br>
+          <br>
+          Back to <%= link_to 'students', students_path %>
+        </div>
+      </div>
+      <div id='setting' class='tab-pane'>
+        <h4>Edit Student profile</h4>
+        <p><%= link_to 'Edit', edit_student_path(@student) %></p>
+        <br>
+        <h4>Delete Student Profile</h4>
+        <p>
+          <%= link_to 'Delete', student_path(@student),
+            method: :delete,
+            data: { confirm: "Are you sure you want to delete: #{@student.first_name}?"}
+          %>
+        </p>
+
+        <br>
+        <h4> Generate Student's reports </h4>
+      </div>
+      <div id='misc' class='tab-pane'>
+        <p>Student reports</p>
+        <p>Fees payment reminder</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+

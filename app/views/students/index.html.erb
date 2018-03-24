@@ -1,0 +1,27 @@
+<% if @students.size == 0 %>
+  <p> Sorry, there are no students saved in your database.</p>
+  <p> <%= link_to 'New Student', new_student_path %></p>
+<% else %>
+  <div class='container row'>
+    <% @students.each do |student|%>
+      <div class='col-md-3'>
+        <div class='thumbnail'>
+          <div class='caption'>
+            <%= link_to student_path(student) do %>
+            <%= student.first_name %>
+            <hr>
+            <br/>
+            <% end %>
+            <%= student.admission_number %> |
+            <%= student.course %>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  <br>
+  <br>
+  </div>
+  <p> Create new student here: &rarr; <%= link_to 'New', new_student_path %></p>
+<% end %>
+
