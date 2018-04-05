@@ -4,8 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(student_id)
-    @full_name = full_name
+    @student = Student.find(student_id).decorate
   end
 
   def new
@@ -63,9 +62,5 @@ end
 
   def student_id
     params[:id]
-  end
-
-  def full_name
-    @student.first_name + " " + @student.last_name
   end
 end
