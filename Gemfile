@@ -16,6 +16,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.4'
 gem 'factory_bot_rails'
+gem 'paloma', '~> 5.1.0'
+gem 'draper'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'

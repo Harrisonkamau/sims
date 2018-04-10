@@ -1,6 +1,6 @@
 <% if @students.size == 0 %>
-  <p> Sorry, there are no students saved in your database.</p>
-  <p> <%= link_to 'New Student', new_student_path %></p>
+  <p> Sorry, there are no students available in your database.</p>
+  <p> <%= link_to 'Create new student', new_student_path %></p>
 <% else %>
   <div class='container row'>
     <% @students.each do |student|%>
