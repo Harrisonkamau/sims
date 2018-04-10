@@ -1,0 +1,21 @@
+<% if @attendances.size == 0 %>
+  <p>Sorry, no attendance has been filled for this student</p>
+  <p><%= link_to 'Create new attendance', new_attendance_path %></p>
+<% else %>
+  <p class='header'>Student's attendances</p>
+  <% @attendances.each do|at| %>
+    <div class='col-md-3'>
+        <div class='thumbnail'>
+          <div class='caption'>
+            <%= link_to attendance_path(at) do %>
+            Attendance for: <%= at.student.first_name %>
+            <hr>
+            <br/>
+            <% end %>
+            Status: <%= at.status %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+<% end %>
+<%= link_to 'New attendance', new_attendance_path %>

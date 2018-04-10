@@ -18,4 +18,12 @@ $(document).on('ready turbolinks:load', function () {
     clearBtn: true
   });
 
+  $('.datepicker-striped').datepicker({
+    format: 'mm/dd/yyyy',
+    title: 'Attendance date',
+    autoclose: true,
+    todayBtn: true,
+    clearBtn: true
+  });
+
 });
