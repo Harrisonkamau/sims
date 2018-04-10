@@ -10,6 +10,9 @@ Rails.application.routes.draw do
         get 'show'
         get 'index'
       end
+
+      resources 'attendances'
+      post 'attendances/new' => 'attendances#create'
     end
 
     unauthenticated do
