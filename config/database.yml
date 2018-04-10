@@ -22,4 +22,5 @@ test:
 production:
   <<: *base
   database: sims_prod
-  # host: TODO
+  username: postgres
+  password: <%= ENV['SIMS_DATABASE_PASSWORD'] %>
