@@ -5,9 +5,10 @@ class Student < ApplicationRecord
 
   DEPARTMENTS = [
     'Arts', 'Business', 'Economics', 'Computer Science', 'Medicine',
-    'Geography'
+    'Geography', 'Music', 'Law', 'Science'
   ]
   COURSES = [
-    'Arts', 'Sociology', 'IT', 'Economics', 'Medicine'
+    'Arts', 'Sociology', 'IT', 'Economics', 'Medicine', 'Sports', 'Psychology',
+    'Law', 'Music', 'Business Commerce', 'Bio-Chemistry'
   ]
 end
