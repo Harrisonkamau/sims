@@ -1,0 +1,17 @@
+<%= form_for @course do |f| %>
+  <div class='form-group'>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: 'Course name', class: 'form-control'%>
+  </div>
+  <div class='form-group'>
+    <%= f.label :units %>
+    <%= f.text_field :units, placeholder: 'Course Units',
+    class: 'form-control', "data-toggle" => "modal", "data-target" => "#myModal"%>
+    <%= render 'modal' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Create course', class: 'btn btn-primary' %>
+  </div>
+
+<% end %>

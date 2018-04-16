@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'courses/index'
 
+  get 'courses/new'
+
+  get 'courses/show'
+
+  get 'courses/edit'
+
+  devise_for :user
   devise_scope :user do
     authenticated :user do
       root 'welcome#index', as: :authenticated_root
@@ -13,6 +20,9 @@ Rails.application.routes.draw do
 
       resources 'attendances'
       post 'attendances/new' => 'attendances#create'
+
+      resources 'courses'
+      post 'courses/new' => 'courses#create'
     end
 
     unauthenticated do
