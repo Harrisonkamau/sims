@@ -1,7 +1,6 @@
 class AttendancesController < ApplicationController
   def index
-    # @attendances = Student.attendances.all
-    @attendances = Attendance.all
+    @attendances = Attendance.all.decorate
   end
 
   def show
@@ -9,7 +8,6 @@ class AttendancesController < ApplicationController
   end
 
   def new
-    # @attendance = student.attendances.new
     @students = Student.all
   end
 

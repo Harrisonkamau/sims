@@ -9,10 +9,14 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    @courses = Course.all.map do |c|
+      [ c.name, c.id ]
+    end
   end
 
   def create
     @student = Student.new(student_params)
+    @student.course_id = params[:course_id]
     if @student.save!
       flash[:notice] = 'Successfully added a student into the database'
       redirect_to student_path(@student)

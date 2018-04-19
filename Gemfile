@@ -18,6 +18,7 @@ gem 'devise', '~> 4.4'
 gem 'factory_bot_rails'
 gem 'paloma', '~> 5.1.0'
 gem 'draper'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'

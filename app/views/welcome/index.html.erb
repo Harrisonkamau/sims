@@ -4,7 +4,6 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a data-toggle="tab" href="#student">Student</a></li>
         <li><a data-toggle="tab" href="#attendance">Attendance</a></li>
-        <li><a data-toggle="tab" href="#timetable">Timetable</a></li>
         <li><a data-toggle="tab" href="#courses">Courses Offered</a></li>
         <li><a data-toggle="tab" href="#admissions">Admissions and Enrolments</a></li>
       </ul>
@@ -47,20 +46,17 @@
       </div>
       <!-- END of Students -->
        <div id="attendance" class="tab-pane fade">
-        <h3 class='header'>Students Register</h3>
+        <h3>Students Register</h3>
         <p><%= link_to 'Create new attendance', new_attendance_path %></p>
       </div>
-      <div id="timetable" class="tab-pane fade">
-        <h3 class='header'>Course Timetables</h3>
-      </div>
       <div id="courses" class="tab-pane fade">
-        <h3 class='header'>Courses Offered</h3>
+        <h3>Courses Offered</h3>
         <p>
           <%= link_to 'New Course', new_course_path %>
         </p>
       </div>
       <div id="admissions" class="tab-pane fade">
-        <h3 class='header'>Admissions and Enrolments</h3>
+        <h3>Admissions and Enrolments</h3>
       </div>
     </div>
   </div>

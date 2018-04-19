@@ -5,11 +5,8 @@ class CreateCourses < ActiveRecord::Migration[5.1]
       t.text :course_type
       t.integer :duration
       t.text :code
-      t.string :student_id
 
       t.timestamps
     end
-
-    add_index :courses, 'student_id'
   end
 end

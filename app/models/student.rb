@@ -8,8 +8,4 @@ class Student < ApplicationRecord
     'Arts', 'Business', 'Economics', 'Computer Science', 'Medicine',
     'Geography', 'Music', 'Law', 'Science'
   ]
-  COURSES = [
-    'Arts', 'Sociology', 'IT', 'Economics', 'Medicine', 'Sports', 'Psychology',
-    'Law', 'Music', 'Business Commerce', 'Bio-Chemistry'
-  ]
 end

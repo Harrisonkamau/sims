@@ -13,7 +13,7 @@
         <div class='col-sm-6'>
           Full Name: &nbsp; <%= @student.full_name %>
           <br>
-          Course: &nbsp; <%= @student.course %>
+          Course: &nbsp; <%= link_to @student.course.name, course_path(@student.course) %>
           <br>
           Admission Number: &nbsp; <%= @student.admission_number %>
           <br>

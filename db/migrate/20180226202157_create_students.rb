@@ -11,9 +11,12 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string     :year_of_completion
       t.string   :gender
       t.string   :fee_status
+      t.string   :course_id
 
 
       t.timestamps
     end
+
+    add_index 'students', :course_id
   end
 end

@@ -29,10 +29,8 @@ ActiveRecord::Schema.define(version: 20180415101120) do
     t.text "course_type"
     t.integer "duration"
     t.text "code"
-    t.string "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["student_id"], name: "index_courses_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -46,8 +44,10 @@ ActiveRecord::Schema.define(version: 20180415101120) do
     t.string "year_of_completion"
     t.string "gender"
     t.string "fee_status"
+    t.string "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_students_on_course_id"
   end
 
   create_table "users", force: :cascade do |t|

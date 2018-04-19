@@ -1,13 +1,24 @@
 class CourseDecorator < Draper::Decorator
   delegate_all
 
-  # Define presentation-specific methods here. Helpers are accessed through
-  # `helpers` (aka `h`). You can override attributes, for example:
-  #
-  #   def created_at
-  #     helpers.content_tag :span, class: 'time' do
-  #       object.created_at.strftime("%a %m/%d/%y")
-  #     end
-  #   end
+  def short_type
+    case course_type
+    when 'Bachelors'
+      short_code = 'BSC'
+      short_code
+    when 'Masters'
+      short_code = 'MSc'
+      short_code
+    when 'Doctorate'
+      short_code = 'PhD'
+      short_code
+    else
+      course_type
+    end
 
+  end
+
+  def course_type
+    object.course_type
+  end
 end
