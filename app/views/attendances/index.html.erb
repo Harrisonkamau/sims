@@ -3,19 +3,28 @@
   <p><%= link_to 'Create new attendance', new_attendance_path %></p>
 <% else %>
   <p class='header'>Student's attendances</p>
-  <% @attendances.each do|at| %>
-    <div class='col-md-3'>
-        <div class='thumbnail'>
-          <div class='caption'>
-            <%= link_to attendance_path(at) do %>
-            Attendance for: <%= at.student.first_name %>
-            <hr>
-            <br/>
-            <% end %>
-            Status: <%= at.status %>
-          </div>
-        </div>
-      </div>
-  <% end %>
+  <table class='table table-striped table-bordered table-hover'>
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Settings</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @attendances.each do|attendance| %>
+        <tr>
+          <td>
+            <%= attendance.student.first_name %>
+          </td>
+          <td><%= attendance.updated_at.to_date.strftime("%d/%m/%Y") %></td>
+          <td>
+            <%= attendance.status %>
+          </td>
+          <td><%= link_to 'Take register', new_attendance_path %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>
-<%= link_to 'New attendance', new_attendance_path %>

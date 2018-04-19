@@ -22,7 +22,7 @@ $(document).on('ready turbolinks:load', function () {
     format: 'mm/dd/yyyy',
     title: 'Attendance date',
     autoclose: true,
-    todayBtn: true,
+    todayHighlight: true,
     clearBtn: true
   });
 

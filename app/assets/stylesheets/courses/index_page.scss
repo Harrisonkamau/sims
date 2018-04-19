@@ -1,23 +1,11 @@
 // all courses styling
 $text_underline: #eee;
 
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
-
 .header {
-  border-bottom: 2px solid $text_underline;
+  text-decoration: solid $text_underline;
   text-align: center;
 }
+
 .courses {
   border-right: 1px solid $text_underline;
   border-left: 1px solid $text_underline;
@@ -26,6 +14,7 @@ $text_underline: #eee;
     padding-top: 12px;
     text-align: center;
   }
+
 }
 
 // Show course styling

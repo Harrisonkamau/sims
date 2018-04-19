@@ -4,7 +4,6 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
-    @courses
   end
 
   def new
@@ -51,7 +50,7 @@ class CoursesController < ApplicationController
   private
 
   def set_course
-    @course = Course.find(course_id)
+    @course = Course.find(course_id).decorate
   end
 
   def course_id
