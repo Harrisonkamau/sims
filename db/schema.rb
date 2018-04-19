@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(version: 20180415101120) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
-    t.string "units", default: [], array: true
+    t.text "name"
+    t.text "course_type"
+    t.integer "duration"
+    t.text "code"
     t.string "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

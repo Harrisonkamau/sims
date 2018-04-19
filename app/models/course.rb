@@ -1,9 +1,6 @@
 class Course < ApplicationRecord
   has_many :students
-  validates :name, :units, presence: true
-  UNITS = [
-    'Introduction to Computer Studies',
-    'Psychology', 'Sociology', 'HIV/AIDS',
-    'Economics', 'Artificial Intelligence'
-  ]
+  validates :name, :course_type, :duration, presence: true
+
+  COURSE_TYPES = %w( Bachelors Masters Doctorate )
 end

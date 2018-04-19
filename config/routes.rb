@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'courses/index'
-
-  get 'courses/new'
-
-  get 'courses/show'
-
-  get 'courses/edit'
-
   devise_for :user
   devise_scope :user do
     authenticated :user do

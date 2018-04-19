@@ -1,3 +1,24 @@
-<h1>Courses#index</h1>
-<p>Find me in app/views/courses/index.html.erb</p>
+<% if @courses.size == 0 %>
+<p>No courses available</p>
 <p><%= link_to 'New course', new_course_path %></p>
+<% else %>
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3'>
+    <h3 class='header'>Courses Offered</h3>
+    <div class='courses'>
+      <% @courses.each do |course|%>
+        <div class='course-details'>
+          <p><%= link_to course.name, course_path(course) %></p>
+        </div>
+      <% end %>
+     <br>
+      <br>
+    </div>
+    <br>
+    <br>
+    <p style='text-align:center;'>
+      <%= link_to 'Create new course', new_course_path, class:'btn btn-primary' %>
+    </p>
+  </div>
+</div>
+<% end %>

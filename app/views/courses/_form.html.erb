@@ -4,14 +4,19 @@
     <%= f.text_field :name, placeholder: 'Course name', class: 'form-control'%>
   </div>
   <div class='form-group'>
-    <%= f.label :units %>
-    <%= f.text_field :units, placeholder: 'Course Units',
-    class: 'form-control', "data-toggle" => "modal", "data-target" => "#myModal"%>
-    <%= render 'modal' %>
+    <%= f.label :course_type %>
+    <%= f.select :course_type, Course::COURSE_TYPES, {}, class: 'form-control'%>
   </div>
-
+  <div class='form-group'>
+    <%= f.label :duration %>
+    <%= f.number_field :duration, placeholder: 'Course Duration', class: 'form-control'%>
+  </div>
+  <div class='form-group'>
+    <%= f.label :course_code %>
+    <%= f.text_field :code, placeholder: 'Course Code: E.g. A01', class: 'form-control'%>
+  </div>
   <div class="form-group">
-    <%= f.submit 'Create course', class: 'btn btn-primary' %>
+    <%= f.submit save_prompt, class: 'btn btn-primary' %>
   </div>
 
 <% end %>

@@ -1,6 +1,6 @@
 <div class='container form'>
   <%= form_for(:course, { controller:'course', action: 'create'}) do |f|%>
-    <%= render 'form' %>
+    <%= render partial: 'form', locals: { save_prompt: 'Create Course' } %>
   <% end %>
 
 </div>
