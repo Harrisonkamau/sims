@@ -1,8 +1,7 @@
 class Student < ApplicationRecord
-  attr_accessor :course
   validates :first_name, :last_name, :admission_number, presence: true
 
-  has_many :attendances
+  has_many :attendances, dependent: :destroy
   belongs_to :course
 
   DEPARTMENTS = [
